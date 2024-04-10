@@ -6,4 +6,6 @@
 3.Папка "fonts" с семейством шрифтов и файлом -fonts.css
 4.Папка images с картинами, изображением и векторной графикой
 
+исходник  https://github.com/yandex-praktikum/ono-tebe-nado
+
 https://github.com/tanyapiperidi/ono-tebe-nado
