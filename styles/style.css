@@ -1,16 +1,15 @@
 .header {
   display: grid;
-  grid-template-columns: 387px 148.11px 1fr;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  gap: 40px;
-  height: 105px;
-  margin: 92px 24px 96px 24px;
+  margin: 92px 24px 90px 24px;
   padding: 0px 28.48px 0px 26.52px;
 }
 
 .header__links-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
 .header__links-list-item {
@@ -28,7 +27,8 @@
 }
 
 .header__logo-image {
-  height: 104.65px;
+  height: 106.65px;
+  width: 134.11px;
 }
 
 .header__link {
@@ -50,10 +50,10 @@
 }
 
 .header__address {
-  margin-left: 145px;
+  justify-self: end;
 }
 
-.address a{
+.header__address__link {
   border-bottom: 1px solid #000000;
   color: #000000;
 }
@@ -62,78 +62,84 @@
 
 .cover {
   position: relative;
-  height: 757px;
   color: #FFFFFF;
   text-transform: uppercase;
+  background-image: url(../images/lotus-flower.png);
+  z-index: 1;
+  flex-direction: column;
+  display: flex;
+  padding: 168px 50px 52px 50px;
+  gap: 135px;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  opacity: 60%;
-  background-color: #000000;
+  background-color: rgb(0 0 0 / 60%);
+  z-index: -1;
 }
 
 .cover__title {
-  position: absolute;
-  top: 173px;
   font-weight: 700;
   font-size: 100px;
-  line-height: 100px;
-}
-
-.aligned-text, .aligned-text_center, .aligned-text_right {
-  display: block;
+  line-height: 124px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 19px;
 }
 
 .aligned-text {
-  margin-left: 50px;
-  letter-spacing: 30px;
+  display: block;
+  letter-spacing: 60px;
 }
 
-.aligned-text span{
-  margin-left: 30px;
+.aligned-text_left {
+  text-align: left;
+  letter-spacing: 30px;
+  line-height: 115%;
 }
 
 .aligned-text_center {
-  margin-top: 27px;
-  margin-left: 336px;
+  text-align: center;
   letter-spacing: 30px;
-}
-
-.aligned-text_center span {
-  margin-left: 30px;
+  line-height: 100%;
 }
 
 .aligned-text_right {
-  margin-top: 20px;
-  margin-left: 634px;
+  text-align: end;
+  letter-spacing: 60px;
+  line-height: 100%;
+}
+
+.aligned-text-spacing-30 {
   letter-spacing: 30px;
 }
 
+.aligned-text-spacing-60 {
+  letter-spacing: 60px;
+}
 
-.aligned-text_right span {
-  margin-left: 30px;
+.aligned-text-spacing-0 {
+  letter-spacing: 0px;
 }
 
 .cover__description {
-  position: absolute;
-  bottom: 51px;
   display: flex;
   align-items: center;
-  margin-left: 82px;
+  gap: 79px;
+  justify-content: flex-end;
 }
+
 .cover__description-text {
   font-weight: 400;
   font-size: 22px;
   word-spacing: 18px;
 }
 
-
 .bet-button {
   width: 256px;
   height: 51px;
-  margin-left: 78px;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
   font-weight: 500;
@@ -141,12 +147,13 @@
   text-transform: uppercase;
   padding: 0px;
   background-color: transparent;
+  font-family: inherit;
 }
 
 /*                         Начало секции lots */
 
 .lots {
-  margin-top: 179px;
+  margin-top: 177px;
 }
 
 .lots__heading {
@@ -165,7 +172,7 @@
 }
 
 .lots__card-list-item {
-  width: 334px;
+  max-width: 334px;
   min-height: 563px;
 }
 
@@ -183,27 +190,22 @@
   height: 100%;
   padding: 48px 40px;
   color: #FFFFFF;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_film {
-  background-image: url(/images/card_type_film.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url(../images/card_type_film.png);
 }
 
 .card_type_book {
-  background-image: url(/images/card_type_book.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url(../images/card_type_book.png);
 }
 
 .card_type_picture {
-  background-image: url(/images/card_type_picture.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url(../images/card_type_picture.png);
 }
 
 .card__title {
@@ -222,15 +224,13 @@
   line-height: 24px;
 }
 
-/* для корректировки тире и многоточья */
+/* для корректировки многоточья */
 
-.card__text span {
+.card__text__span-ellipses {
   font-size: 18px;
 }
 
 .lots__look-more-link {
-  display: block;
-  width: 192px;
   margin: 30px 0px 0px 64px;
   border-bottom: 1px solid #000000;
   color: #000000;
@@ -250,18 +250,19 @@
 }
 
 .about__logo {
-  position: relative;
   width: 240px;
   height: 240px;
-  margin-left: 48px;
-  border-radius: 100%;
+  margin: 0 auto;
+  border-radius: 50%;
   background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .about__logo-image {
-  position: absolute;
   width: 148px;
   height: 114px;
-  margin: 62px 42.52px 64px 46.48px;
 }
 
 .about__title {
@@ -283,8 +284,8 @@
   line-height: 24px;
 }
 
-.about__text:first-child {
-  margin-bottom: 26px;
+.about__text:not(:first-child) {
+  margin-top: 26px;
 }
 
 /* Конец секции "ОБ АУКЦИОНЕ" */
@@ -292,8 +293,6 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  width: 1000px;
-  height: 97px;
   margin: 178px 50px 91px 50px;
 }
 
@@ -313,12 +312,14 @@
   width: 240px;
 }
 
-.footer__menu-list-item a {
-  color: #000000;
+.footer__menu-list-item {
   font-weight: 400;
   font-size: 18px;
 }
 
 .footer__menu-link {
   border-bottom: 1px solid #000000;
+}
+.footer__link_active {
+  border-bottom: none;
 }
