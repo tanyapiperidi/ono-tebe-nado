@@ -4,5 +4,8 @@
 1.index.html
 2.Папка "styles" с файлами-style.css и -global.css
 3.Папка "fonts" с семейством шрифтов и файлом -fonts.css
-4.Папка images с картинками и векторной графикой
+4.Папка images с картинами, изображением и векторной графикой
 
+исходник  https://github.com/yandex-praktikum/ono-tebe-nado
+
+https://github.com/tanyapiperidi/ono-tebe-nado
