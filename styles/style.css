@@ -13,6 +13,8 @@
 }
 
 .header__links-list-item {
+  font-weight: 400;
+  font-size: 18px;
   list-style-type: circle;
 }
 
@@ -20,15 +22,9 @@
   list-style-type:none;
 }
 
-.header__links-list-item_no-bullit {
-  color: #000000;
-  font-weight: 400;
-  font-size: 18px;
-}
-
 .header__logo-image {
-  height: 106.65px;
   width: 134.11px;
+  height: 106.65px;
 }
 
 .header__link {
@@ -43,92 +39,82 @@
 }
 
 .address {
-  font-style: normal;
-  line-height: 24px;
   font-weight: 400;
   font-size: 18px;
+  font-style: normal;
+  line-height: 24px;
 }
 
 .header__address {
   justify-self: end;
 }
 
-.header__address__link {
+.address__link {
   border-bottom: 1px solid #000000;
-  color: #000000;
 }
 
 /*                         Начало секции cover */
 
 .cover {
   position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  padding: 168px 50px 52px 50px;
   color: #FFFFFF;
   text-transform: uppercase;
-  background-image: url(../images/lotus-flower.png);
-  z-index: 1;
-  flex-direction: column;
-  display: flex;
-  padding: 168px 50px 52px 50px;
-  gap: 135px;
+  background-image: url(../images/lotus-flower.png); 
+  background-position: center;
+  background-size: cover; 
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgb(0 0 0 / 60%);
   z-index: -1;
+  background-color: rgb(0 0 0 / 60%);
 }
 
 .cover__title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 19px;
   font-weight: 700;
   font-size: 100px;
   line-height: 124px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 19px;
+  letter-spacing: 30px;
 }
 
-.aligned-text {
-  display: block;
+.letter-spacing-extendet {
   letter-spacing: 60px;
 }
 
 .aligned-text_left {
-  text-align: left;
-  letter-spacing: 30px;
   line-height: 115%;
+  text-align: left;
 }
 
 .aligned-text_center {
-  text-align: center;
-  letter-spacing: 30px;
   line-height: 100%;
+  text-align: center;
 }
 
 .aligned-text_right {
-  text-align: end;
-  letter-spacing: 60px;
   line-height: 100%;
+  text-align: end;
 }
 
-.aligned-text-spacing-30 {
-  letter-spacing: 30px;
-}
-
-.aligned-text-spacing-60 {
-  letter-spacing: 60px;
-}
-
-.aligned-text-spacing-0 {
+.no-letter-spacing {
   letter-spacing: 0px;
 }
 
 .cover__description {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 79px;
-  justify-content: flex-end;
 }
 
 .cover__description-text {
@@ -141,13 +127,13 @@
   width: 256px;
   height: 51px;
   border: 1px solid #FFFFFF;
+  padding: 0px;
   color: #FFFFFF;
+  font-family: inherit;
   font-weight: 500;
   font-size: 22px;
   text-transform: uppercase;
-  padding: 0px;
   background-color: transparent;
-  font-family: inherit;
 }
 
 /*                         Начало секции lots */
@@ -184,13 +170,13 @@
 
 .card {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   padding: 48px 40px;
   color: #FFFFFF;
-  z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -233,7 +219,6 @@
 .lots__look-more-link {
   margin: 30px 0px 0px 64px;
   border-bottom: 1px solid #000000;
-  color: #000000;
   font-weight: 400;
   font-size: 20px;
 }
@@ -250,14 +235,14 @@
 }
 
 .about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 240px;
   height: 240px;
   margin: 0 auto;
   border-radius: 50%;
   background-color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .about__logo-image {
@@ -320,6 +305,7 @@
 .footer__menu-link {
   border-bottom: 1px solid #000000;
 }
+
 .footer__link_active {
   border-bottom: none;
 }
